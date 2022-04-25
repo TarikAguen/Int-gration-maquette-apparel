@@ -1,0 +1,198 @@
+.bodyContainer {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+.leftContainer {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  flex-direction: column;
+  background-image: url(./images/bg-pattern-desktop.svg);
+}
+.rightContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0%;
+  height: 100%;
+}
+.imgContainer {
+  object-fit: cover;
+}
+
+.imgContainerMobile {
+  object-fit: contain;
+}
+
+.logoTitle {
+  display: flex;
+  width: 90%;
+  height: 30%;
+  padding-left: 20%;
+}
+.textTitle {
+  display: flex;
+  height: 30%;
+  padding-left: 20%;
+  flex-direction: column;
+  justify-content: center;
+}
+.textsubTitle {
+  display: flex;
+  height: 20%;
+  padding-left: 20%;
+}
+.inputEmail {
+  display: flex;
+  padding-left: 20%;
+  flex-direction: column;
+}
+
+.title1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 68px;
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+  text-transform: uppercase;
+  letter-spacing: 9px;
+}
+.title2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 68px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+}
+.textsubTitle {
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: hsl(0, 36%, 70%);
+  line-height: 30px;
+}
+.btnSubmit {
+  background: linear-gradient(315deg, hsl(0, 74%, 74%), hsl(0, 80%, 86%));
+  border-radius: 30px;
+  width: 107px;
+  height: 56px;
+  box-shadow: 0px 8px 15px rgba(184, 116, 116, 0.4);
+  border: none;
+  position: absolute;
+  z-index: 3;
+  margin-left: -105px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.btnSubmit:hover {
+  background-position: 105px;
+  box-shadow: 0px 8px 35px rgba(153, 109, 109, 0.4);
+  background: linear-gradient(315deg, hsl(0, 80%, 86%), hsl(0, 100%, 91%));
+}
+
+.inputStyle {
+  width: 400px;
+  height: 50px;
+  border: hsl(0, 56%, 85%);
+  border-radius: 30px;
+  border-width: 0.1px;
+  border-style: solid;
+  padding-left: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.inputStyle:hover,
+:focus {
+  outline: none;
+}
+::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #e4d3d3;
+  font-size: 18px;
+  justify-content: center;
+}
+
+.repBtn {
+  text-align: left;
+  padding-left: 30px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.iconValidtionEmail {
+  position: absolute;
+  top: 82%;
+  left: 45%;
+  z-index: 10;
+}
+
+.imgTitle {
+  display: flex;
+  height: 30%;
+  width: 100%;
+}
+
+/* max-width -> quand je passe en dessous de cette taille - */
+@media screen and (max-width: 905px) {
+  .rightContainer {
+    display: none;
+  }
+  .leftContainer {
+    width: 100%;
+  }
+  .logoTitle {
+    height: 20%;
+  }
+  .textTitle {
+    padding: 0;
+  }
+  .title1 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title2 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .textsubTitle {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconValidtionEmail {
+    top: 90%;
+    left: 52%;
+  }
+}
+
+/* min-width -> quand je passe au dessus cette taille + */
+@media screen and (min-width: 905px) {
+  .imgTitle {
+    display: none;
+  }
+  .imgContainerMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .inputStyle {
+    width: 230px;
+  }
+}
